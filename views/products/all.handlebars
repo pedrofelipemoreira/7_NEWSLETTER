@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/card.css">
+
+<h1>Noticias</h1>
+
+<section class="container-news">
+    {{#each products}}
+        <div class="card-newsletter">
+
+            <img src="{{this.image}}" alt="{{this.title}}">
+
+            <div class="info-newsletter">
+
+                <div class="titulo-newsletter">
+
+                    <p>Junho 29, 2023</p>
+
+                    <div class="titulo-news">
+
+                        <h3>{{this.title}}</h3>
+
+                    </div>
+
+                </div>
+
+                <a href="/products/{{this._id}}">Ler Mais <i class="fa-solid fa-arrow-right"></i> </a>
+                <a href="/products/edit/{{this._id}}">Editar</a>
+            </div>
+            {{!-- <div class="actions">
+                <a href="/products/edit/{{this._id}}">Editar</a>
+            </div> --}}
+        </div>
+    {{/each}}
+</section>
